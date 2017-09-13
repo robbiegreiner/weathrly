@@ -1,5 +1,9 @@
 @import "./variables.scss";
 
+.app-screen {
+  background-color: blue;
+}
+
 .welcome-screen {
   align-items: flex-end;
   background-image: url("../images/welcome-background.jpg");
