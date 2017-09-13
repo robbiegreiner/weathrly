@@ -42,6 +42,6 @@ npm test
 
 ![Welcome Screen Inspo](images/Welcome-Screen-Inspo.JPG)
 
-![Main App Inspo](images/Inspo1.JPG)
+![Main App Inspo](images/Inspo1.png)
 
-![Main App Inspo](images/Inspo2.JPG)
+![Main App Inspo](images/Inspo2.png)
