@@ -1,0 +1,90 @@
+@import "./variables.scss";
+
+.welcome-screen {
+  align-items: flex-end;
+  background-image: url("../images/welcome-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: flex-start;
+  margin: 0;
+  width: 100%;
+}
+
+.welcome-screen h1 {
+  color: $text-or-border-color;
+  font-size: 75px;
+}
+
+.welcome-screen h1,
+.welcome-screen input,
+.welcome-screen button {
+  margin-right: 25px;
+}
+
+.welcome-screen input {
+  background-color: $input-background-color;
+  font-size: 40px;
+  height: 50px;
+  padding-left: 50px;
+  width: 300px;
+}
+
+.welcome-screen input,
+.welcome-screen button {
+  border: 3px solid $text-or-border-color;
+  border-radius: 25px;
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+
+.welcome-screen button {
+  background-color: $button-background-color;
+  color: $text-or-border-color;
+  height: 60px;
+  width: 355px;
+  &:hover {
+    cursor: pointer;
+    background-color: $button-hover-color;
+  }
+}
+
+@media (max-width: 975px) {
+  .welcome-screen h1 {
+    font-size: 50px;
+    margin-left: 60px;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .welcome-screen {
+    background-image: url("../images/mobile-welcome-background.jpg");
+    background-size: auto;
+  }
+
+  .welcome-screen input,
+  .welcome-screen button {
+    font-size: 15px;
+    margin-left: 60px;
+  }
+
+  .welcome-screen h1 {
+    font-size: 30px;
+    margin-bottom: 100px;
+  }
+
+  .welcome-screen input {
+    height: 25px;
+    padding-left: 70px;
+    width: 200px;
+  }
+
+  .welcome-screen button {
+    height: 32px;
+    width: 280px;
+  }
+}
