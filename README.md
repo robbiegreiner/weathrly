@@ -29,3 +29,19 @@ To run tests in Node:
 ```js
 npm test
 ```
+
+## Design Mockups and Dribbble inspo
+
+![Welcome Screen Mockup](images/mockup1.JPG)
+
+![Main Screen Mockup](images/mockup2.JPG)
+
+![7 hour forecast Screen Mockup](images/mockup2.JPG)
+
+![10 day forecast Screen Mockup](images/mockup4.JPG)
+
+![Welcome Screen Inspo](images/Welcome-Screen-Inspo.JPG)
+
+![Main App Inspo](images/Inspo1.JPG)
+
+![Main App Inspo](images/Inspo2.JPG)
