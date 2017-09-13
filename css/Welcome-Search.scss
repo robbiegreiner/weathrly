@@ -1,29 +1,22 @@
 @import "./variables.scss";
 
-body {
-  margin: 0;
-  box-sizing: border-box;
-}
-
-
 .welcome-screen {
-  background-image: url("../images/welcome-background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-  width: 100%;
-  margin: 0;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
   align-items: flex-end;
+  background-image: url("../images/welcome-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: flex-start;
+  margin: 0;
+  width: 100%;
 }
 
 .welcome-screen h1 {
-  font-family: $main-font;
-  font-size: 75px;
   color: $text-or-border-color;
+  font-size: 75px;
 }
 
 .welcome-screen h1,
@@ -33,26 +26,26 @@ body {
 }
 
 .welcome-screen input {
-  font-size: 40px;
-  padding-left: 50px;
   background-color: $input-background-color;
-  width: 300px;
+  font-size: 40px;
   height: 50px;
+  padding-left: 50px;
+  width: 300px;
 }
 
 .welcome-screen input,
 .welcome-screen button {
   border: 3px solid $text-or-border-color;
   border-radius: 25px;
-  margin-bottom: 25px;
   font-size: 40px;
+  margin-bottom: 25px;
 }
 
 .welcome-screen button {
-  width: 355px;
-  height: 60px;
-  color: $text-or-border-color;
   background-color: $button-background-color;
+  color: $text-or-border-color;
+  height: 60px;
+  width: 355px;
   &:hover {
     cursor: pointer;
     background-color: $button-hover-color;
@@ -69,12 +62,13 @@ body {
 
 @media (max-width: 600px) {
   .welcome-screen {
-    background-size: auto;
     background-image: url("../images/mobile-welcome-background.jpg");
+    background-size: auto;
   }
 
   .welcome-screen input,
   .welcome-screen button {
+    font-size: 15px;
     margin-left: 60px;
   }
 
@@ -83,19 +77,14 @@ body {
     margin-bottom: 100px;
   }
 
-  .welcome-screen input,
-  .welcome-screen button {
-    font-size: 15px;
-  }
-
   .welcome-screen input {
-    width: 200px;
     height: 25px;
     padding-left: 70px;
+    width: 200px;
   }
 
   .welcome-screen button {
-    width: 280px;
     height: 32px;
+    width: 280px;
   }
 }
