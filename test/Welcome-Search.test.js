@@ -3,15 +3,16 @@ import { shallow, mount } from 'enzyme';
 import React from 'react';
 
 describe('WelcomeSearch functionality', () => {
+  let mockfn = () => {};
   const shallowWelcomeSearch = shallow(<WelcomeSearch />);
 
-  it('should have a title', () => {
+  it.skip('should have a title', () => {
     const title = shallowWelcomeSearch.find('h1');
 
     expect(title.text()).toEqual('welcome to good weather.');
   });
 
-  it('should change state when search input changed', () => {
+  it.only('should change state when search input changed', () => {
     const input = shallowWelcomeSearch.find('input');
 
     expect(shallowWelcomeSearch.state('searchInput')).toEqual(undefined);
