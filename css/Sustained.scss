@@ -8,13 +8,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  margin: 0px;
 }
 
 .tabs {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 700px;
+  width: 40%;
   display: flex;
 }
 
@@ -29,6 +30,14 @@
     cursor: pointer;
     background-color: $button-hover-color;
   }
+}
+
+.border {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 63%;
+  border-bottom: 3px solid $text-or-border-color;
 }
 
 .tabs .in-view {

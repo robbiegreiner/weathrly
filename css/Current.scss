@@ -1,0 +1,25 @@
+@import "./variables.scss";
+
+.current {
+  background-color: $input-background-color;
+  border-left: 3px solid $text-or-border-color;
+  height: 30vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.current .condition {
+  margin: 0px;
+}
+
+.summary {
+  display: inline-block;
+}
+
+.summary,
+.condition-img,
+.high-low {
+  margin-top: 30px;
+  height: 75%;
+  border: 1px solid black;
+}
