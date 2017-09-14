@@ -40,6 +40,8 @@ npm test
 
 ![10 day forecast Screen Mockup](images/mockup4.JPG)
 
+![Current Forecast Mobile Mockup](images/current-mobile-mockup.JPG)
+
 ![Welcome Screen Inspo](images/Welcome-Screen-Inspo.png)
 
 ![Main App Inspo](images/Inspo1.png)
