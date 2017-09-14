@@ -8,13 +8,14 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  margin: 0px;
 }
 
 .tabs {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 700px;
+  width: 40%;
   display: flex;
 }
 
@@ -31,6 +32,14 @@
   }
 }
 
+.border {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 63%;
+  border-bottom: 3px solid $text-or-border-color;
+}
+
 .tabs .in-view {
   border-bottom: none;
   &:hover {
@@ -45,15 +54,70 @@
   right: 0;
   display: flex;
   flex-direction: column;
-  padding-right: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  // padding-right: 20px;
+  background-color: rgba(254, 237, 227, 0.5);
+  // opacity: 0.5;
+  // padding: 20px;
+  border-radius: 25px 0px 0px 25px;
+  padding-left: 50px;
+
 }
 
 .sustained-info p {
   display: inline-block;
+  margin-bottom: 0px;
+  font-weight: bold;
 }
 
 .sustained-info .city {
   color: $text-or-border-color;
-  font-size: 35px;
-  font-weight: bold;
+  font-size: 45px;
+  margin-top: 20px;
+}
+
+.sustained-info .date,
+.sustained-info .temp, {
+  font-size: 30px;
+  color: $button-hover-color;
+}
+
+.sustained-info .temp {
+  font-size: 45px;
+
+}
+
+.sustained-info input,
+.sustained-info button {
+  margin-right: 0px;
+}
+
+.sustained-info input {
+  background-color: $input-background-color;
+  font-size: 40px;
+  height: 50px;
+  padding-left: 50px;
+  width: 300px;
+}
+
+.sustained-info input,
+.sustained-info button {
+  border: 3px solid $text-or-border-color;
+  border-right: none;
+  border-radius: 25px 0px 0px 25px;
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-top: 25px;
+}
+
+.sustained-info button {
+  background-color: $button-background-color;
+  color: $text-or-border-color;
+  height: 60px;
+  width: 355px;
+  &:hover {
+    cursor: pointer;
+    background-color: $button-hover-color;
+  }
 }
