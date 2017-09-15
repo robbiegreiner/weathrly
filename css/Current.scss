@@ -12,8 +12,9 @@
   margin: 0px;
 }
 
-.summary {
+.summary-text {
   display: inline-block;
+  margin: 20px;
 }
 
 .summary,
@@ -21,5 +22,57 @@
 .high-low {
   margin-top: 30px;
   height: 75%;
-  border: 1px solid black;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 25px;
+  color: $text-or-border-color;
+  background-color: rgba(235, 128, 73, 0.5);
+  border-radius: 25px;
 }
+
+.current img {
+  display: inline-block;
+  height: 60%;
+  width: auto;
+}
+
+.high,
+.low {
+  margin: 10px;
+}
+
+@media (max-width: 815px) {
+  .summary,
+  .condition-img,
+  .high-low {
+    font-size: 20px;
+  }
+}
+
+  @media (max-width: 600px) {
+    .summary,
+    .condition-img,
+    .high-low {
+      width: 75%;
+      height: auto;
+      flex-direction: row;
+    }
+
+    .current {
+      flex-direction: column;
+      height: auto;
+      align-items: center;
+    }
+
+    .current .condition {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    .summary {
+      margin-bottom: 20px;
+    }
+  }
