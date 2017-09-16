@@ -88,6 +88,12 @@
 
 }
 
+.sustained-info .controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .sustained-info input,
 .sustained-info button {
   margin-right: 0px;
@@ -97,8 +103,8 @@
   background-color: $input-background-color;
   font-size: 40px;
   height: 50px;
-  padding-left: 50px;
-  width: 300px;
+  padding-left: 10px;
+  width: 450px;
 }
 
 .sustained-info input,
@@ -115,7 +121,7 @@
   background-color: $button-background-color;
   color: $text-or-border-color;
   height: 60px;
-  width: 355px;
+  width: 80px;
   &:hover {
     cursor: pointer;
     background-color: $button-hover-color;
@@ -145,10 +151,12 @@
 
   .sustained-info .date {
     font-size: 18px;
+    margin-top: 0px;
   }
 
   .sustained-info .temp {
     font-size: 25px;
+    margin-top: 10px;
   }
 
   .sustained-info input,
@@ -158,11 +166,11 @@
 
   .sustained-info input {
     height: 25px;
-    width: 150px;
+    width: 250px;
   }
 
   .sustained-info button {
     height: 35px;
-    width: 205px;
+    width: 50px;
   }
 }
