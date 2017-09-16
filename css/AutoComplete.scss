@@ -4,6 +4,9 @@
   margin-right: 40px;
   font-size: 36px;
   list-style-type: none;
+  li{
+    cursor: pointer;
+  }
 }
 .autocomplete-box-sustained{
   width: 400px;
@@ -12,4 +15,7 @@
   font-size: 36px;
   list-style-type: none;
   margin-bottom: 100px;
+  li{
+    cursor: pointer;
+  }
 }
