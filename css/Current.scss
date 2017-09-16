@@ -8,7 +8,8 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  padding-left: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .current .condition {
@@ -74,9 +75,8 @@
 
   @media (max-width: 600px) {
     .summary,
-    .condition-img,
-    .high-low {
-      width: 75%;
+    .condition-img {
+      width: auto;
       height: auto;
       flex-direction: row;
     }
@@ -84,12 +84,13 @@
     .current {
       flex-direction: column;
       height: auto;
-      align-items: center;
+      align-items: flex-start;
     }
 
     .current .condition {
       display: inline-block;
-      margin-right: 20px;
+      width: 25%;
+      margin-right: 10px; 
     }
 
     .summary {
