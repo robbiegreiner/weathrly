@@ -31,7 +31,7 @@
   align-items: center;
   font-size: 25px;
   color: $text-or-border-color;
-  background-color: rgba(235, 128, 73, 0.5);
+  background-color: $card-color;
   border-radius: 25px;
 }
 
@@ -52,7 +52,7 @@
 }
 
 .img-background {
-  background-color: white;
+  background-color: $input-background-color;
   height: auto;
   width: auto;
   padding: 10px;
@@ -90,7 +90,7 @@
     .current .condition {
       display: inline-block;
       width: 25%;
-      margin-right: 10px; 
+      margin-right: 10px;
     }
 
     .summary {
