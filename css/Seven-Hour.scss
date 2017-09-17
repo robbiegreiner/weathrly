@@ -1,0 +1,101 @@
+@import "./variables.scss";
+
+.seven-hour {
+  background-color: $input-background-color;
+  border-left: 3px solid $text-or-border-color;
+  height: 30vh;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.seven-hour .card {
+  width: 10%;
+  border-radius: 25px;
+  height: auto;
+  background-color: $card-color;
+  padding: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: $text-or-border-color;
+  text-align: center;
+}
+
+.seven-hour-condition {
+  width: 90%;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.time {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.time,
+.temp {
+  display: inline-block;
+  margin: 0px;
+}
+
+.seven-hour .img-background {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1000px) {
+  .seven-hour {
+    flex-direction: column;
+    height: 60vh;
+  }
+
+  .seven-hour .card {
+    width: 420px;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+  }
+
+  .seven-hour-condition {
+    width: 150px;
+    margin-top: 10px;
+  }
+
+  .seven-hour .img-background {
+    border-radius: 0px;
+  }
+
+  .temp {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .seven-hour {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .seven-hour .card {
+    width: 100%;
+    border-radius: 0px;
+    margin-left: 0px;
+    font-size: 12px;
+  }
+
+  .time {
+    font-size: 14px;
+  }
+
+  .seven-hour-condition {
+    width: 110px;
+  }
+
+}
