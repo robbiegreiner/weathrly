@@ -5,7 +5,11 @@
   border-left: 3px solid $text-or-border-color;
   height: 30vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .current .condition {
@@ -18,25 +22,42 @@
 }
 
 .summary,
-.condition-img,
-.high-low {
+.condition-img {
   margin-top: 30px;
-  height: 75%;
-  width: 25%;
+  height: auto;
+  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   font-size: 25px;
   color: $text-or-border-color;
   background-color: $card-color;
   border-radius: 25px;
 }
 
+.high-low  {
+  display: flex;
+  flex-direction: column;
+}
+
+.condition-img {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .current img {
   display: inline-block;
   height: 60%;
   width: auto;
+}
+
+.img-background {
+  background-color: $input-background-color;
+  height: auto;
+  width: auto;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 25px;
 }
 
 .high,
@@ -54,9 +75,8 @@
 
   @media (max-width: 600px) {
     .summary,
-    .condition-img,
-    .high-low {
-      width: 75%;
+    .condition-img {
+      width: auto;
       height: auto;
       flex-direction: row;
     }
@@ -64,12 +84,13 @@
     .current {
       flex-direction: column;
       height: auto;
-      align-items: center;
+      align-items: flex-start;
     }
 
     .current .condition {
       display: inline-block;
-      margin-right: 20px;
+      width: 25%;
+      margin-right: 10px;
     }
 
     .summary {
