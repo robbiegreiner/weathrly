@@ -22,7 +22,7 @@
 .tabs div {
   border: 3px solid $text-or-border-color;
   padding: 10px;
-  background-color: $input-background-color;
+  background-color: $button-background-color;;
   color: $text-or-border-color;
   border-radius: 25px 25px 0px 0px;
   font-size: 20px;
@@ -30,13 +30,14 @@
     cursor: pointer;
     background-color: $button-hover-color;
   }
+  z-index: 100;
 }
 
 .border {
   position: absolute;
   bottom: 0px;
   right: 0px;
-  width: 60%;
+  width: 100%;
   border-bottom: 3px solid $text-or-border-color;
 }
 
@@ -46,6 +47,7 @@
     cursor: auto;
     background-color: $input-background-color;
   }
+  background-color: $input-background-color;
 }
 
 .sustained-info {
@@ -59,6 +61,7 @@
   background-color: rgba(254, 237, 227, 0.5);
   border-radius: 25px 0px 0px 25px;
   padding-left: 50px;
+  padding-bottom: 20px;
 
 }
 
@@ -94,6 +97,7 @@
 .sustained-info input,
 .sustained-info button {
   margin-right: 0px;
+  color: $text-or-border-color;
 }
 
 .sustained-info input {
@@ -102,6 +106,7 @@
   height: 50px;
   padding-left: 10px;
   width: 450px;
+
 }
 
 .sustained-info input,
@@ -116,7 +121,6 @@
 
 .sustained-info button {
   background-color: $button-background-color;
-  color: $text-or-border-color;
   height: 60px;
   width: 80px;
   &:hover {
