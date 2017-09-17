@@ -19,13 +19,13 @@
 }
 
 .welcome-screen h1 {
-  color: $text-or-border-color;
   font-size: 75px;
 }
 
 .welcome-screen h1,
 .welcome-screen input,
 .welcome-screen button {
+  color: $text-or-border-color;
   margin-right: 25px;
 }
 
@@ -42,12 +42,10 @@
   border: 3px solid $text-or-border-color;
   border-radius: 25px;
   font-size: 40px;
-  margin-bottom: 25px;
 }
 
 .welcome-screen button {
   background-color: $button-background-color;
-  color: $text-or-border-color;
   height: 60px;
   width: 85px;
   &:hover {
@@ -67,7 +65,7 @@
 @media (max-width: 600px) {
   .welcome-screen {
     background-image: url("../images/mobile-welcome-background.jpg");
-    background-size: auto;
+    background-size: cover;
   }
 
   .welcome-screen .controls {
@@ -82,8 +80,8 @@
   }
 
   .welcome-screen h1 {
-    font-size: 30px;
-    margin-bottom: 100px;
+    font-size: 50px;
+    margin-bottom: 20px;
   }
 
   .welcome-screen input {
