@@ -56,10 +56,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  // padding-right: 20px;
   background-color: rgba(254, 237, 227, 0.5);
-  // opacity: 0.5;
-  // padding: 20px;
   border-radius: 25px 0px 0px 25px;
   padding-left: 50px;
 
@@ -129,6 +126,10 @@
 }
 
 @media (max-width: 750px) {
+  .border {
+    width: 40%;
+  }
+
   .tabs {
     height: 15%;
     width: 80%;
