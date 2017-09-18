@@ -3,7 +3,7 @@
 .current {
   background-color: $input-background-color;
   border-left: 3px solid $text-or-border-color;
-  height: 30vh;
+  height: 50vh;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -83,7 +83,7 @@
 
     .current {
       flex-direction: column;
-      height: auto;
+      height: 50vh;
       align-items: flex-start;
     }
 

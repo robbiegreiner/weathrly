@@ -15,7 +15,7 @@
 .seven-hour .card {
   width: 10%;
   border-radius: 25px;
-  height: auto;
+  height: 75%;
   background-color: $card-color;
   padding: 20px;
   margin-right: 5px;
@@ -34,13 +34,10 @@
   margin-bottom: 10px;
 }
 
-.time {
-  font-weight: bold;
-  font-size: 20px;
-}
-
 .time,
 .temp {
+  font-weight: bold;
+  font-size: 20px;
   display: inline-block;
   margin: 0px;
 }
@@ -68,8 +65,16 @@
     margin-top: 10px;
   }
 
+  .time {
+    width: 100px;
+  }
+
   .seven-hour .img-background {
     border-radius: 0px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .temp {
@@ -92,6 +97,7 @@
 
   .time {
     font-size: 14px;
+    width: 50px;
   }
 
   .card-condition {
