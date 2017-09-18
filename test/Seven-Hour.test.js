@@ -33,8 +33,8 @@ describe('SevenHour functionality', () => {
     expect(cards.nodes[0].props.img).toEqual('cloudy.png');
   });
 
-  it('should have high and low temp on cards', () => {
-    expect(cards.nodes[0].props.temp).toEqual('High: 83°F Low: 59°F');
+  it('should have temp on cards', () => {
+    expect(cards.nodes[0].props.temp).toEqual('77°F');
   });
 
 })
