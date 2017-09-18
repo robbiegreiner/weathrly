@@ -4,3 +4,4 @@ import './Sustained.scss';
 import './Current.scss';
 import './Seven-Hour.scss';
 import './AutoComplete.scss';
+import './Ten-Day.scss';
