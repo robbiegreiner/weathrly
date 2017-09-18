@@ -8,7 +8,6 @@ describe('WelcomeSearch functionality', () => {
   it('should have a title', () => {
     const title = shallowWelcomeSearch.find('h1');
 
-    console.log(shallowWelcomeSearch.debug())
     expect(title.text()).toEqual('welcome to good weather.');
   });
 
