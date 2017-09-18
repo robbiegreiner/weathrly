@@ -1,17 +1,17 @@
 import SevenHour from '../lib/Seven-Hour.js';
 import { shallow, mount } from 'enzyme';
-import WeatherObject from '../lib/WeatherObject.js'
 import React from 'react';
-import DummyData from './Dummy-Data.js';
 
 describe('SevenHour functionality', () => {
-  const parsedData = DummyData.json();
-  console.log(parsedData);
-  const weatherObj = new
- WeatherObject(parsedData);
+  const obj = {
+    FCTTIME : { hour : '0' },
+    condition: 'cloudy',
+    icon_url: 'cloudy.png',
+    temp: { english: '77' },
+  };
   const hourlyInfo = [];
   for (let i = 0; i < 7; i++) {
-    hourlyInfo.push(weatherObj);
+    hourlyInfo.push(obj);
   }
   const weather = { hourlyInfo: hourlyInfo };
   const mountSevenHour = mount(<SevenHour weather={weather}/>);
@@ -21,7 +21,7 @@ describe('SevenHour functionality', () => {
     expect(cards.nodes.length).toEqual(7);
   });
 
-  it('should have time on cards', () => {
+  it('should have hour on cards', () => {
     expect(cards.nodes[0].props.time).toEqual('');
   });
 
@@ -30,11 +30,11 @@ describe('SevenHour functionality', () => {
   });
 
   it('should have img url on cards', () => {
-    expect(cards.nodes[0].props.img).toEqual('http://www.freeiconspng.com/img/11074');
+    expect(cards.nodes[0].props.img).toEqual('cloudy.png');
   });
 
-  it('should have temp on cards', () => {
-    expect(cards.nodes[0].props.temp).toEqual('77°F');
+  it('should have high and low temp on cards', () => {
+    expect(cards.nodes[0].props.temp).toEqual('High: 83°F Low: 59°F');
   });
 
 })

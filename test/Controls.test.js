@@ -1,14 +1,15 @@
 import Controls from '../lib/Controls.js';
-import App from '../lib/App.js'
-import WelcomeSearch from '../lib/Welcome-Search.js'
 import { shallow, mount } from 'enzyme';
 import React from 'react';
 
 describe('Controls', () => {
   let mockfn = () => {};
-  let app = shallow(<App />)
-  let welcomeSearch = shallow(<WelcomeSearch />)
-  let controls = shallow(<Controls />);
+
+  let controls = shallow(<Controls className='sustained-controls'
+                                  setAppState={mockfn}
+                                  searchValue= '80220'
+                                  getCurrentWeather={mockfn}
+                                  />);
   let input = controls.find('input');
   let button = controls.find('button');
 
