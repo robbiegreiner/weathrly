@@ -1,0 +1,138 @@
+@import "./variables.scss";
+
+.ten-day {
+  background-color: $input-background-color;
+  border-left: 3px solid $text-or-border-color;
+  height: 30vh;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.ten-day .card {
+  width: 10%;
+  border-radius: 25px;
+  height: 75%;
+  background-color: $card-color;
+  padding: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: $text-or-border-color;
+  text-align: center;
+}
+
+@media (max-width: 1680px) {
+  .ten-day .temp {
+    font-size: 15px;
+    display: inline-block;
+    width: 90%;
+  }
+
+}
+
+@media (max-width: 1440px) {
+  .ten-day {
+    flex-wrap: wrap;
+    height: 50vh;
+  }
+
+  .ten-day .card {
+    width: 15%;
+    height: 40%;
+    margin-bottom: 20px;
+  }
+
+  .ten-day .temp {
+    font-size: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 60%;
+  }
+}
+
+@media (max-width: 1150px) {
+  .ten-day .temp {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1045px) {
+    .ten-day {
+      flex-direction: column;
+      height: 60vh;
+      flex-wrap: nowrap;
+    }
+
+    .ten-day .card {
+      width: 700px;
+      flex-direction: row;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      justify-content: flex-start;
+      height: auto;
+    }
+
+    .ten-day .time {
+      display: inline-block;
+      width: 250px;
+    }
+
+    .ten-day .card-condition {
+      width: 300px;
+      margin-left: 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    .ten-day .temp {
+      font-size: 15px;
+      margin-left: 10px;
+      width: 300px;
+    }
+
+    .ten-day .img-background {
+      border-radius: 0px;
+      margin-left: 10px;
+      width: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+}
+
+@media (max-width: 770px) {
+
+  .ten-day {
+    padding-left: 0px;
+  }
+
+  .ten-day .card {
+    width: 100%;
+    border-radius: 0px;
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ten-day .temp,
+  .ten-day .time {
+    font-size: 10px;
+  }
+
+  .ten-day .time {
+    width: 100px;
+  }
+
+  .ten-day .card-condition {
+    width: 150px;
+    font-size: 10px;
+  }
+}
