@@ -27,6 +27,12 @@ describe('Card functionality', () => {
     expect(cardIcon.prop('src')).toEqual('sunny.png');
   });
 
+  it('the icon should have an alt tag describing the condition', () => {
+    const cardIcon = shallowCard.find('img');
+
+    expect(cardIcon.prop('alt')).toEqual('sunny');
+  });
+
   it('should show current temp', () => {
     const cardTemp = shallowCard.find('.temp');
 
