@@ -1,79 +1,79 @@
 @import "./variables.scss";
 
+.card-condition {
+  height: 50px;
+  width: 90%;
+}
+
 .seven-hour {
   background-color: $input-background-color;
   border-left: 3px solid $text-or-border-color;
-  height: 30vh;
   display: flex;
+  height: 30vh;
   justify-content: space-around;
+  padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 .seven-hour .card {
-  width: 10%;
-  border-radius: 25px;
-  height: 75%;
+  align-items: center;
   background-color: $card-color;
-  padding: 20px;
-  margin-right: 5px;
-  margin-left: 5px;
+  border-radius: 25px;
+  color: $text-or-border-color;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 75%;
   justify-content: flex-start;
-  color: $text-or-border-color;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 20px;
   text-align: center;
-}
-
-.card-condition {
-  width: 90%;
-  height: 50px;
-}
-
-.time,
-.temp {
-  font-weight: bold;
-  font-size: 20px;
-  display: inline-block;
-  margin: 0px;
+  width: 10%;
 }
 
 .seven-hour .img-background {
   margin-bottom: 20px;
 }
 
+.time,
+.temp {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px;
+}
+
 @media (max-width: 1000px) {
+  .card-condition {
+    margin-top: 10px;
+    width: 150px;
+  }
+
   .seven-hour {
     flex-direction: column;
     height: 60vh;
   }
 
   .seven-hour .card {
-    width: 420px;
     flex-direction: row;
-    margin-top: 10px;
-    margin-bottom: 10px;
     justify-content: flex-start;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 420px;
   }
 
-  .card-condition {
-    width: 150px;
-    margin-top: 10px;
+  .seven-hour .img-background {
+    align-items: center;
+    border-radius: 0px;
+    display: flex;
+    height: 75px;
+    justify-content: center;
   }
 
   .time {
     width: 100px;
-  }
-
-  .seven-hour .img-background {
-    border-radius: 0px;
-    height: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .temp {
@@ -82,25 +82,25 @@
 }
 
 @media (max-width: 500px) {
+  .card-condition {
+    width: 110px;
+  }
+
   .seven-hour {
     padding-left: 0px;
     padding-right: 0px;
   }
 
   .seven-hour .card {
-    width: 100%;
     border-radius: 0px;
-    margin-left: 0px;
     font-size: 12px;
+    margin-left: 0px;
+    width: 100%;
   }
 
   .time {
     font-size: 14px;
     width: 50px;
-  }
-
-  .card-condition {
-    width: 110px;
   }
 
 }
