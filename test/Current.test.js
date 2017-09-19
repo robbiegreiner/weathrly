@@ -9,8 +9,8 @@ describe('Current functionality', () => {
     high: '76',
     low: '56',
     summary: 'Lots of sunshine. High 76F. Winds ESE at 5 to 10 mph.',
-  }
-  const shallowCurrent = shallow(<Current weather={weather} />)
+  };
+  const shallowCurrent = shallow(<Current weather={weather} />);
 
   it('should display condition', () => {
     const condition = shallowCurrent.find('.condition');
