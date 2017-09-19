@@ -30,31 +30,33 @@ describe('Sustained functionality', () => {
     expect(city.text()).toEqual('Denver, CO');
   });
 
-  it('should have a date with weekday, month, and day', () => {
+  it('should have a date with month, day and year', () => {
+    const day = shallowSustained.find('.date');
 
+    expect(day.text()).toEqual('September 19, 2017');
   });
 
   it('should have a temp', () => {
+    const temp = shallowSustained.find('.temp');
 
+    expect(temp.text()).toEqual('77°F');
   });
 
   it('should render controls', () => {
+    const controls = shallowSustained.find('Controls');
 
+    expect(controls.nodes.length).toEqual(1);
   });
 
   it('should render autocomplete', () => {
+    const autoComplete = shallowSustained.find('AutoComplete');
 
+    expect(autoComplete.nodes.length).toEqual(1);
   });
 
-  it('should have current weather tab', () => {
+  it('should have a current tab, seven hour tab and ten day tab', () => {
+    const tabs = shallowSustained.find('.single-tab');
 
-  });
-
-  it('should have seven hour tab', () => {
-
-  });
-
-  it('should have ten day tab', () => {
-
+    expect(tabs.nodes.length).toEqual(3);
   });
 });
