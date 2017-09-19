@@ -1,48 +1,49 @@
 @import "./variables.scss";
 
-.autocomplete-box-welcome {
-  width: 300px;
-  z-index: 100;
-  color: $text-or-border-color;
-  border-radius: 25px;
-  height: auto;
-  margin-right: 135px;
-  font-size: 36px;
-  list-style-type: none;
-  li:hover{
-    cursor: pointer;
-    background-color: $button-background-color;
-  }
-  background-color: $input-background-color;
-  padding-left: 20px;
-}
 .autocomplete-box-sustained {
-  position: absolute;
-  top: 310px;
-  right: 45px;
-  width: 360px;
-  z-index: 101;
-  color: $text-or-border-color;
+  background-color: $input-background-color;
   border-radius: 25px;
-  height: auto;
-  margin-right: 40px;
+  color: $text-or-border-color;
   font-size: 36px;
+  height: auto;
   list-style-type: none;
   margin-bottom: 100px;
+  margin-right: 40px;
+  padding-left: 20px;
+  position: absolute;
+  right: 45px;
+  top: 310px;
+  width: 360px;
+  z-index: 101;
   li:hover {
     cursor: pointer;
     background-color: $button-background-color;
   }
+}
+
+.autocomplete-box-welcome {
   background-color: $input-background-color;
+  border-radius: 25px;
+  color: $text-or-border-color;
+  font-size: 36px;
+  height: auto;
+  list-style-type: none;
+  margin-right: 135px;
   padding-left: 20px;
+  width: 300px;
+  z-index: 100;
+  li:hover{
+    cursor: pointer;
+    background-color: $button-background-color;
+  }
 }
 
 @media (max-width: 750px) {
   .autocomplete-box-sustained {
+    font-size: 20px;
     right: 20px;
     top: 180px;
     width: 180px;
-    font-size: 20px;
     li {
       margin-top: 10px;
       margin-bottom: 10px;
@@ -53,10 +54,9 @@
 @media (max-width: 600px) {
   .autocomplete-box-welcome {
     font-size: 15px;
-    width: 170px;
     margin-right: 110px;
+    width: 170px;
     li {
-      // display: inline-block;
       margin-top: 10px;
       margin-bottom: 10px;
     }

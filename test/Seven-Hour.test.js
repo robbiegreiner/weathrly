@@ -4,17 +4,17 @@ import React from 'react';
 
 describe('SevenHour functionality', () => {
   const obj = {
-    FCTTIME : { hour : '0' },
-    condition: 'cloudy',
-    icon_url: 'cloudy.png',
-    temp: { english: '77' },
+    condition: 'rainy',
+    temp: { english: '82', metric: '28' },
+    FCTTIME: { civil: '6:00 PM' },
+    icon_url: 'http://icons.wxug.com/i/c/k/partlycloudy.gif',
   };
   const hourlyInfo = [];
-  for (let i = 0; i < 7; i++) {
+  for (let i = 0; i < 7; i ++) {
     hourlyInfo.push(obj);
   }
   const weather = { hourlyInfo: hourlyInfo };
-  const mountSevenHour = mount(<SevenHour weather={weather}/>);
+  const mountSevenHour = mount(<SevenHour weather={weather} />);
   const cards = mountSevenHour.find('Card');
 
   it('should display seven cards', () => {
@@ -22,19 +22,18 @@ describe('SevenHour functionality', () => {
   });
 
   it('should have hour on cards', () => {
-    expect(cards.nodes[0].props.time).toEqual('');
+    expect(cards.nodes[0].props.time).toEqual('6:00 PM');
   });
 
   it('should have condition on cards', () => {
-    expect(cards.nodes[0].props.condition).toEqual('cloudy');
+    expect(cards.nodes[0].props.condition).toEqual('rainy');
   });
 
   it('should have img url on cards', () => {
-    expect(cards.nodes[0].props.img).toEqual('cloudy.png');
+    expect(cards.nodes[0].props.img).toEqual('http://icons.wxug.com/i/c/k/partlycloudy.gif');
   });
 
   it('should have temp on cards', () => {
-    expect(cards.nodes[0].props.temp).toEqual('77°F');
+    expect(cards.nodes[0].props.temp).toEqual('82°F');
   });
-
-})
+});

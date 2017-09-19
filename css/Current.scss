@@ -1,5 +1,10 @@
 @import "./variables.scss";
 
+.condition-img {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .current {
   background-color: $input-background-color;
   border-left: 3px solid $text-or-border-color;
@@ -12,8 +17,33 @@
   padding-right: 5%;
 }
 
+.current img {
+  display: inline-block;
+  height: 60%;
+  width: auto;
+}
+
 .current .condition {
   margin: 0px;
+}
+
+.high-low  {
+  display: flex;
+  flex-direction: column;
+}
+
+.high,
+.low {
+  margin: 10px;
+}
+
+.img-background {
+  background-color: $input-background-color;
+  border-radius: 25px;
+  height: auto;
+  margin: 10px;
+  padding: 10px;
+  width: auto;
 }
 
 .summary-text {
@@ -23,46 +53,16 @@
 
 .summary,
 .condition-img {
-  margin-top: 30px;
-  height: auto;
-  width: auto;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  font-size: 25px;
-  color: $text-or-border-color;
   background-color: $card-color;
   border-radius: 25px;
-}
-
-.high-low  {
+  color: $text-or-border-color;
   display: flex;
-  flex-direction: column;
-}
-
-.condition-img {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.current img {
-  display: inline-block;
-  height: 60%;
-  width: auto;
-}
-
-.img-background {
-  background-color: $input-background-color;
+  font-size: 25px;
   height: auto;
+  justify-content: center;
+  margin-top: 30px;
   width: auto;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 25px;
-}
-
-.high,
-.low {
-  margin: 10px;
 }
 
 @media (max-width: 815px) {
@@ -74,26 +74,26 @@
 }
 
   @media (max-width: 600px) {
+    .current {
+      align-items: flex-start;
+      flex-direction: column;
+      height: 50vh;
+    }
+
+    .current .condition {
+      display: inline-block;
+      margin-right: 10px;
+      width: 25%;
+    }
+
+    .summary {
+      margin-bottom: 20px;
+    }
+
     .summary,
     .condition-img {
       width: auto;
       height: auto;
       flex-direction: row;
-    }
-
-    .current {
-      flex-direction: column;
-      height: 50vh;
-      align-items: flex-start;
-    }
-
-    .current .condition {
-      display: inline-block;
-      width: 25%;
-      margin-right: 10px;
-    }
-
-    .summary {
-      margin-bottom: 20px;
     }
   }
