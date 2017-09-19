@@ -4,7 +4,7 @@ import React from 'react';
 
 describe('App functionality', () => {
   it.skip('should be a test?', () => {
-    let mockfn = () => {};
+    // let mockfn = () => {};
     const shallowApp = shallow(<App />);
-  })
-})
+  });
+});
