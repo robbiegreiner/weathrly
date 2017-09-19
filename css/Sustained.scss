@@ -1,74 +1,42 @@
 @import "./variables.scss";
 
-.sustained {
+.border {
+  border-bottom: 3px solid $text-or-border-color;
+  bottom: 0px;
+  position: absolute;
+  right: 0px;
   width: 100%;
+}
+
+.sustained {
   background-image: url("../images/welcome-background.jpg");
-  height: 70vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  height: 70vh;
   margin: 0px;
-}
-
-.tabs {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 40%;
-  display: flex;
-}
-
-.tabs div {
-  border: 3px solid $text-or-border-color;
-  padding: 10px;
-  background-color: $button-background-color;;
-  color: $text-or-border-color;
-  border-radius: 25px 25px 0px 0px;
-  font-size: 20px;
-  &:hover {
-    cursor: pointer;
-    background-color: $button-hover-color;
-  }
-  z-index: 100;
-}
-
-.border {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
+  position: relative;
   width: 100%;
-  border-bottom: 3px solid $text-or-border-color;
-}
-
-.tabs .in-view {
-  border-bottom: none;
-  &:hover {
-    cursor: auto;
-    background-color: $input-background-color;
-  }
-  background-color: $input-background-color;
 }
 
 .sustained-info {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
   background-color: rgba(254, 237, 227, 0.5);
   border-radius: 25px 0px 0px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   padding-left: 50px;
   padding-bottom: 20px;
-
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .sustained-info p {
   display: inline-block;
-  margin-bottom: 0px;
   font-weight: bold;
+  margin-bottom: 0px;
 }
 
 .sustained-info .city {
@@ -79,25 +47,18 @@
 
 .sustained-info .date,
 .sustained-info .temp, {
-  font-size: 30px;
   color: $button-hover-color;
+  font-size: 30px;
 }
 
 .sustained-info .temp {
   font-size: 45px;
-
 }
 
 .sustained-info .controls {
+  align-items: flex-end;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-}
-
-.sustained-info input,
-.sustained-info button {
-  margin-right: 0px;
-  color: $text-or-border-color;
 }
 
 .sustained-info input {
@@ -112,10 +73,12 @@
 .sustained-info input,
 .sustained-info button {
   border: 3px solid $text-or-border-color;
-  border-right: none;
   border-radius: 25px 0px 0px 25px;
+  border-right: none;
+  color: $text-or-border-color;
   font-size: 40px;
   margin-bottom: 10px;
+  margin-right: 0px;
   margin-top: 25px;
 }
 
@@ -129,27 +92,50 @@
   }
 }
 
-@media (max-width: 750px) {
-  .sustained {
-    height: 50vh;
+.tabs {
+  bottom: 0;
+  display: flex;
+  left: 0;
+  position: absolute;
+  width: 40%;
+}
+
+.tabs div {
+  background-color: $button-background-color;;
+  border: 3px solid $text-or-border-color;
+  border-radius: 25px 25px 0px 0px;
+  color: $text-or-border-color;
+  font-size: 20px;
+  padding: 10px;
+  z-index: 100;
+  &:hover {
+    cursor: pointer;
+    background-color: $button-hover-color;
   }
+}
+
+.tabs .in-view {
+  background-color: $input-background-color;
+  border-bottom: none;
+  &:hover {
+    cursor: auto;
+    background-color: $input-background-color;
+  }
+}
+
+@media (max-width: 750px) {
   .border {
     width: 40%;
-  }
-
-  .tabs {
-    height: 15%;
-    width: 80%;
-  }
-
-  .tabs div {
-    font-size: 15px;
   }
 
   .single-tab {
     display: inline-block;
     margin-bottom: 10px;
     margin-top: 0px;
+  }
+
+  .sustained {
+    height: 50vh;
   }
 
   .sustained-info .city {
@@ -181,4 +167,14 @@
     height: 35px;
     width: 50px;
   }
+
+  .tabs {
+    height: 15%;
+    width: 80%;
+  }
+
+  .tabs div {
+    font-size: 15px;
+  }
+
 }
