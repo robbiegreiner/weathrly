@@ -3,7 +3,6 @@ import { shallow, mount } from 'enzyme';
 import React from 'react';
 
 describe('Card functionality', () => {
-
   const shallowCard = shallow(<Card time='9:40'
                                     condition='sunny'
                                     img='sunny.png'
@@ -38,5 +37,4 @@ describe('Card functionality', () => {
 
     expect(cardTemp.text()).toEqual('84 F');
   });
-
 });
