@@ -58,20 +58,30 @@ describe('App functionality', () => {
     expect(tenDay.nodes.length).toEqual(1);
   });
 
-  it.skip('should change this.state.searchValue onChange in input', () => {
+  it('should change this.state.searchValue onChange in input', () => {
     expect(wrapper.node.state.searchValue).toEqual('');
     const input = wrapper.find('input');
-    input.props().onChange({ currentTarget: { value: 'Denver, CO' } });
+    input.simulate('change', { target: { value: 'Denver, CO' } });
     expect(wrapper.node.state.searchValue).toEqual('Denver, CO');
   });
 
   it.skip('should change this.url and this.state.weather onClick of button', () => {
     expect(wrapper.node.state.weather).toEqual({});
     expect(wrapper.node.url).toEqual('');
-    const button = wrapper.find('button');
+    const button = wrapper.find('button').at(0).node;
     const input = wrapper.find('input');
-    input.setValue('Denver, CO');
-    button.simulate('click');
+    input.simulate('change', { target: { value: 'Denver, CO' } });
+    const event = wrapper.node.setState({ weather: { city: wrapper.node.state.searchValue },
+                                                      url: 'http://www.wunderground.com' });
+    button.dispatchEvent(event);
+    // button.onClick = () => {
+    //   wrapper.node.setState({ weather: { city: wrapper.node.state.searchValue },
+    //                                                   url: 'http://www.wunderground.com' });
+    // };
+    // console.log(button.debug());
+    // button.simulate('click');
+    // console.log(wrapper.node.state.weather);
+    // console.log(wrapper.node.url);
   });
 
   it('should change this.state.view to current when clicking current tab', () => {
