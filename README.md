@@ -1,4 +1,8 @@
-# React Starter Kit
+# Weathrly
+
+Live Site: http://www.robbieg.io/weathrly/
+
+This is a weather application built with React.  We utilize the weather underground API to fetch current weather data for a given city.  Also implemented is an autocomplete feature that I built previously.
 
 To install the dependencies:
 
@@ -30,20 +34,5 @@ To run tests in Node:
 npm test
 ```
 
-## Design Mockups and Dribbble inspo
+## Screenshots
 
-![Welcome Screen Mockup](images/mockup1.JPG)
-
-![Main Screen Mockup](images/mockup2.JPG)
-
-![7 hour forecast Screen Mockup](images/mockup2.JPG)
-
-![10 day forecast Screen Mockup](images/mockup4.JPG)
-
-![Current Forecast Mobile Mockup](images/current-mobile-mockup.JPG)
-
-![Welcome Screen Inspo](images/Welcome-Screen-Inspo.png)
-
-![Main App Inspo](images/Inspo1.png)
-
-![Main App Inspo](images/Inspo2.png)
